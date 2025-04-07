@@ -1,0 +1,34 @@
+telegram:
+  bot:
+    username: MyCryptoUpdates
+    token: 8172440934:AAGLFbKfxuliskDOn_cOhx54jdhxQLE3U10
+    notify:
+      delay:
+        value: 10
+        unit: MINUTES
+
+binance:
+  api:
+    getPrice: https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.xml
+    enabled: true
+
+
+
+#db:
+#  driver:
+#    name: org.postgresql.Driver
+#  url: jdbc:postgresql://localhost:5432/db
+#  user: root
+#  password: root
