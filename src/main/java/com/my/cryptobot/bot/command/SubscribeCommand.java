@@ -39,8 +39,8 @@ public class SubscribeCommand implements IBotCommand {
         if (priceToBuy != null) {
             try {
                 String currentPriceBTC = TextUtil.toString(service.getBtcPrice());
-                answer.setText("Текущая цена BTC: " + currentPriceBTC + " USD\n" +
-                        "✅ Новая подписка создана на стоимость BTC " + priceToBuy);
+                answer.setText("Current price of BTC: " + currentPriceBTC + " USD\n" +
+                        "✅ New subscription created for BTC price: " + priceToBuy);
                 absSender.execute(answer);
             } catch (TelegramApiException e) {
                 log.error("Error occurred in /subscribe command", e);
@@ -49,8 +49,8 @@ public class SubscribeCommand implements IBotCommand {
             }
         } else {
             answer.setText("""
-                    The target purchase price is specified incorrectly 
-                    or is not specified at all 
+                    The target purchase price is specified incorrectly\s
+                    or is not specified at all\s
                     (example of entering the value 85233.43)""");
             try {
                 absSender.execute(answer);
