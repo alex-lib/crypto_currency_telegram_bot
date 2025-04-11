@@ -23,12 +23,3 @@ spring:
   liquibase:
     change-log: classpath:db.changelog/db.changelog-master.xml
     enabled: true
-
-
-
-#db:
-#  driver:
-#    name: org.postgresql.Driver
-#  url: jdbc:postgresql://localhost:5432/db
-#  user: root
-#  password: root

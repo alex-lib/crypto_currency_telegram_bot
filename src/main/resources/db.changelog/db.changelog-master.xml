@@ -3,16 +3,6 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
 
-<!--    <changeSet id="createSubscribersTable" author="root">-->
-<!--        <createTable tableName="subscribers">-->
-<!--            <column name="id" type="bigint" autoIncrement="true">-->
-<!--            </column>-->
-<!--            <column name="user_name" type="varchar(50)"/>-->
-<!--            <column name="subscriber_uuid" type="uuid"/>-->
-<!--            <column name="price_to_buy_btc" type="double"/>-->
-<!--        </createTable>-->
-<!--    </changeSet>-->
-
     <changeSet id="createSubscribersTable" author="root">
         <createTable tableName="subscribers">
             <column name="id" type="bigint">

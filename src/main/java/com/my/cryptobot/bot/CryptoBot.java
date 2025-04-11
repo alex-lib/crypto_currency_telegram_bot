@@ -1,19 +1,17 @@
 package com.my.cryptobot.bot;
-
+import com.my.cryptobot.services.PriceNotificationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.extensions.bots.commandbot.TelegramLongPollingCommandBot;
 import org.telegram.telegrambots.extensions.bots.commandbot.commands.IBotCommand;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
 import java.util.List;
-
 
 @Service
 @Slf4j
 public class CryptoBot extends TelegramLongPollingCommandBot {
-
+    private PriceNotificationService priceNotificationService;
     private final String botUsername;
 
     public CryptoBot(
@@ -22,6 +20,7 @@ public class CryptoBot extends TelegramLongPollingCommandBot {
             List<IBotCommand> commandList) {
         super(botToken);
         this.botUsername = botUsername;
+        this.priceNotificationService = priceNotificationService;
         commandList.forEach(this::register);
     }
 
